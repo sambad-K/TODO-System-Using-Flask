@@ -14,12 +14,13 @@ class TODO(db.Model):
         return (f"{self.title}---> {self.desc}")
 @app.route('/',methods=["GET","POST"])
 def insert():
+    alltodo=TODO.query.all()
     if request.method=="POST":
         if request.form["title"] and request.form["desc"]:
             todo=TODO(title=request.form["title"],desc=request.form["desc"])
             db.session.add(todo)
             db.session.commit()
-    alltodo=TODO.query.all()
+            return redirect('/')
     return render_template("index.html",alltodo=alltodo)
 @app.route("/delete/<int:sn>")
 def delete(sn):
@@ -27,6 +28,19 @@ def delete(sn):
     db.session.delete(faltodo)
     db.session.commit()
     return redirect("/")
+@app.route("/update/<int:sn>",methods=['GET','POST'])
+def update(sn):
+    todo=TODO.query.filter_by(sn=sn).first()
+    if request.method=="POST":
+        title=request.form['title']
+        des=request.form['desc']
+        todo.title=title
+        todo.desc=des
+        todo.date=datetime.now()
+        db.session.add(todo)
+        db.session.commit()
+        return redirect("/")
+    return render_template("update.html",todo=todo)
 # main driver function
 if __name__ == '__main__':
     app.run(debug=True,port=2000)

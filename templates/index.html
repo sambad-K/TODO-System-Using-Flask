@@ -1,14 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
-</head>
-<body>
-    <div class="container">
+{% extends 'base.html' %}
+        {% block title  %}
+                 TODO-HOME
+        {% endblock title  %}
+{% block body %}
+<div class="container">
         <form method="POST" action="/">
   <div class="mb-3">
     <label for="exampleInputEmail1" class="form-label">Title</label>
@@ -25,6 +21,10 @@
         {% if alltodo|length ==0%}
             <b>No record</b>
         {% else %}
+              <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
             <table class="table">
   <thead>
     <tr>
@@ -43,6 +43,7 @@
       <td>{{i.desc}}</td>
       <td>{{i.date}}</td>
       <td><a type="button" class="btn btn-danger" href="\delete\{{i.sn}}">Delete</button></td>
+      <td><a type="button" class="btn btn-danger" href="\update\{{i.sn}}">Delete</button></td>
     </tr> 
     {% endfor %}
 
@@ -50,6 +51,4 @@
 </table>
         {% endif %}
     </div>
-
-</body>
-</html>
+{% endblock body %}
