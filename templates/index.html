@@ -32,7 +32,8 @@
       <th scope="col">Title</th>
       <th scope="col">Description</th>
       <th scope="col">Date</th>
-      <th scope="col">Action</th>
+      <th scope="col">Delete</th>
+      <th scope="col">Update</th>
     </tr>
   </thead>
   <tbody>
@@ -43,7 +44,7 @@
       <td>{{i.desc}}</td>
       <td>{{i.date}}</td>
       <td><a type="button" class="btn btn-danger" href="\delete\{{i.sn}}">Delete</button></td>
-      <td><a type="button" class="btn btn-danger" href="\update\{{i.sn}}">Delete</button></td>
+      <td><a type="button" class="btn btn-danger" href="\update\{{i.sn}}">Update</button></td>
     </tr> 
     {% endfor %}
 
