@@ -8,7 +8,7 @@ from wtforms.validators import Email,Length,DataRequired,ValidationError
 from passlib.hash import sha256_crypt
 from flask_login import LoginManager,login_user,logout_user,current_user,UserMixin,login_required
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///users.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://myuser:mypassword@localhost:5432/mydb'
 app.config['SECRET_KEY'] = 'your_secret'
 db=SQLAlchemy(app)
 login_manager=LoginManager()
