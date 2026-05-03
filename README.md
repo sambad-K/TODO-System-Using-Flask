@@ -56,11 +56,12 @@ Python, Flask, Backend Development, CRUD Systems, Web Application Architecture
 - Task filtering and prioritization
 - REST API version
 - Deployment on cloud platforms
-
-## Author
-Sambad K  
-GitHub: https://github.com/sambad-K
-
+---
+##Contact
+Email: sambadkhatiwada939@gmail.com
+Linkedin:https://www.linkedin.com/in/sambad-khatiwada/
+Github: https://github.com/sambad-K/
+---
 ## License
 This project is for educational purposes only.
 
