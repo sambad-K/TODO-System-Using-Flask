@@ -65,12 +65,11 @@ GitHub: https://github.com/sambad-K
 This project is for educational purposes only.
 
 ## Screenshots
-
 ### Login Page
-![Login Page](assets/Login.png)
+<img src="assets/Login.png" width="350"/>
 
 ### Register Page
-![Register Page](assets/Register.png)
+<img src="assets/Register.png" width="350"/>
 
 ### TODO Dashboard
-![TODO Page](assets/TODO.png)
+<img src="assets/TODO.png" width="350"/>
