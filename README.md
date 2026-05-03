@@ -67,10 +67,10 @@ This project is for educational purposes only.
 ## Screenshots
 
 ### Login Page
-![Login Page](static/assets/Login.png)
+![Login Page](assets/Login.png)
 
 ### Register Page
-![Register Page](static/assets/Register.png)
+![Register Page](assets/Register.png)
 
 ### TODO Dashboard
-![TODO Page](static/assets/TODO.png)
+![TODO Page](assets/TODO.png)
