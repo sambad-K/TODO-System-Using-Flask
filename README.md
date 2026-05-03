@@ -23,18 +23,7 @@ Optional: MongoDB / database integration (if used)
 - Basic MVC-style structure
 - Static file handling
 
-## Project Structure
-.
-├── app.py
-├── requirements.txt
-├── static/
-│   ├── css/
-│   ├── js/
-│   └── images/
-├── templates/
-│   ├── index.html
-│   ├── update.html
-└── README.md
+----
 
 ## Installation & Setup
 
